@@ -5,3 +5,16 @@
 body {
   margin: 0;
 }
+
+.navbar {
+  height: 70px;
+  display: flex;
+  padding: 20px 36px;
+  position: relative;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav--logo {
+  position: absolute;
+  max-width: 100px;
+}
