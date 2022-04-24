@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 .navbar {
@@ -14,7 +15,40 @@ body {
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
 }
 
-.nav--logo {
+.navLogo {
   position: absolute;
   max-width: 100px;
+}
+
+/* .heroSection{
+  display: flex;
+  flex-direction: column;
+} */
+
+
+.grid {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.infoSection {
+  margin-left: 4rem;
+  justify-items: left;
+}
+
+.infoTitle {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 110%;
+  margin-bottom: 16px;
+}
+
+.infoSummary {
+  word-wrap: break-word;
+  inline-size: 20rem;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 130%;
 }
