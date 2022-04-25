@@ -1,20 +1,19 @@
-import photo from '../../Assets/katie-zaferes.png'
 import star from '../../Assets/Star.png'
 
-const Card = () => {
+const Card = (props) => {
   return (
     <div className='card'>
-      <img src={photo} alt='exp' className='cardImage' />
+      <img src={props.img} alt='cardImage' className='cardImage' />
       <div>
         <img src={star} alt='star' className='star' />
-        <span>5.0</span>
-        <span className='gray'>(6) • </span>
-        <span className='gray'>USA</span>
+        <span>{props.rating}</span>
+        <span className='gray'>({props.reviewCount}) • </span>
+        <span className='gray'>{props.country}</span>
       </div>
 
-      <p>Title goes here</p>
+      <p>{props.title}</p>
       <p>
-        <span className='bold'>From $136</span> / person
+        <span className='bold'>From ${props.price}</span> / person
       </p>
     </div>
   )
