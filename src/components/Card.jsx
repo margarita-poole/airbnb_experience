@@ -1,20 +1,27 @@
 import star from '../Images/Star.png'
 
-const Card = (props) => {
-  console.log('props', props)
+const Card = ({ item }) => {
+  let badgeText
+  if (item.openSpots === 0) {
+    badgeText = 'SOLD OUT'
+  } else if (item.location === 'Online') {
+    badgeText = 'ONLINE'
+  }
+
   return (
     <div className='cardContainer'>
       <div className='card'>
-        <img src={props.img} alt='cardImage' className='cardImage' />
+        {badgeText ? <div className='cardBadge'>{badgeText} </div> : null}
+        <img src={item.coverImg} alt='cardImage' className='cardImage' />
         <div className='cardStats'>
           <img src={star} alt='star' className='star' />
-          <span>{props.rating}</span>
-          <span className='gray'>({props.reviewCount}) • </span>
-          <span className='gray'>{props.location}</span>
+          <span>{item.stats.rating}</span>
+          <span className='gray'>({item.stats.reviewCount}) • </span>
+          <span className='gray'>{item.location}</span>
         </div>
-        <p className='cardTitle'>{props.title}</p>
+        <p className='cardTitle'>{item.title}</p>
         <p className='cardPrice'>
-          <span className='bold'>From ${props.price}</span> / person
+          <span className='bold'>From ${item.price}</span> / person
         </p>
       </div>
     </div>

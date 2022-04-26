@@ -66,6 +66,17 @@ body {
   flex: 0 0 auto;
   flex-direction: column;
   margin: 50px;
+  position: relative;
+}
+
+.cardBadge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
 }
 
 .cardImage {

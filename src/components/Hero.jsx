@@ -1,4 +1,4 @@
-import photoGrid from '../Assets/photo-grid.png'
+import photoGrid from '../Images/photo-grid.png'
 
 const Hero = () => {
   return (
