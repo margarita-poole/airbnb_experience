@@ -5,20 +5,17 @@ import Navbar from './components/Navbar'
 import data from './data'
 
 function App() {
-  const cards = data.map((item) => {
-    return (
-      <Card
-        key={item.id}
-        item={item}
-      />
-    )
-  })
-
   return (
-    <div className='App'>
+    <div className='app'>
       <Navbar />
-      <Hero />
-      {cards}
+      <div className='body'>
+        <Hero />
+        <div>
+          {data.map((item) => {
+            return <Card key={item.id} item={item} />
+          })}
+        </div>
+      </div>
     </div>
   )
 }
